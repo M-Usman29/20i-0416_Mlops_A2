@@ -82,7 +82,7 @@ with DAG("usman-dag", start_date=datetime.now(), schedule="@daily", catchup=Fals
 
     gitPushTask = BashOperator(
         task_id="Git_Push",
-        bash_command="git -C /home/kali/airflow/dags/MLops_A2/ push origin master",
+        bash_command="git -C /home/kali/airflow/dags/MLops_A2 push origin master",
     )
 
     extractingDataTask >> transformingDataTask >> loadingDataTask >> gitPushTask
