@@ -46,8 +46,8 @@ def transform_data(input_file, output_file):
     print(f"Data saved to {output_file}")
 
 def load():
-    os.system('cd /home/kali/airflow/dags/MLops_A2/ && dvc add cleaned_dataset.csv')
-    os.system('cd /home/kali/airflow/dags/MLops_A2/ && git add /home/kali/airflow/dags/MLops_A2/cleaned_dataset.csv.dvc')
+    os.system('cd /home/kali/airflow/dags/MLops_A2/ && dvc add processed_dataset.csv')
+    os.system('cd /home/kali/airflow/dags/MLops_A2/ && git add /home/kali/airflow/dags/MLops_A2/processed_dataset.csv.dvc')
     os.system('cd /home/kali/airflow/dags/MLops_A2/ && git commit -m "data updated using airflow')
     os.system('cd /home/kali/airflow/dags/MLops_A2/ && dvc push')
 
@@ -59,7 +59,7 @@ urls = [
 
 file_name = "/home/kali/airflow/dags/MLops_A2/dataset.csv"
 input_file = file_name
-output_file = "/home/kali/airflow/dags/MLops_A2/cleaned_dataset.csv"
+output_file = "/home/kali/airflow/dags/MLops_A2/processed_dataset.csv"
 
 with DAG("usman-dag", start_date=datetime.now(), schedule="@daily", catchup=False) as dag:
 
