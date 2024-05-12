@@ -42,6 +42,8 @@ Initialize a new SQLite database to create the Airflow meta-store that Airflow n
 
 Create the administrative user and password used to access Airflow.
 
+(add respective username and password)
+
  $ airflow users create --role Admin --username admin --email admin --firstname admin --lastname admin --password my-password
 
  $ nohup airflow scheduler > scheduler.log 2>&1 &
