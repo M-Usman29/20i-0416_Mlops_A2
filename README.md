@@ -55,5 +55,19 @@ Start the Airflow web server on port 8080.
 $ nohup airflow webserver -p 8080 > webserver.log 2>&1 &
 
 
+Setup DVC:
+
+pip install beautifulsoup4 requests dvc dvc[gdrive] pandas
+
+download this file:
+
+https://dvc.org/download/linux-deb/dvc-3.50.1
+
+Run this command:
+
+sudo apt install ./dvc_3.50.1_amd64.deb
+
+
+
 
 
